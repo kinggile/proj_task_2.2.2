@@ -10,4 +10,16 @@ public class Car {
         this.length = length;
         this.width = width;
     }
+
+    public String getCarModel() {
+        return carModel;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public int getWidth() {
+        return width;
+    }
 }
