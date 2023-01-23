@@ -1,7 +1,5 @@
 package web.service;
 
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import web.DAO.CarDAO;
 import web.model.Car;

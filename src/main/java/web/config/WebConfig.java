@@ -13,7 +13,6 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 
 // замена appContextSpringMVC
-// замена web.xml????
 @Configuration
 @EnableWebMvc
 @ComponentScan("web")
