@@ -4,10 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import web.service.CarService;
 
 @Controller
+@RequestMapping("/cars")
 public class CarController {
 
     private CarService carService;
@@ -17,11 +19,16 @@ public class CarController {
         this.carService = carService;
     }
 
-    @GetMapping(value = "/cars")
+    @GetMapping()
     public String getCarTable(@RequestParam(value = "count", defaultValue = "5",
-            required = false) int count, Model model) {
+            required = false) Integer count, Model model) {
 
-        model.addAttribute("cars", carService.getCountedCars(count));
+        if (count == null) {
+            model.addAttribute("cars", carService.getAllCars());
+        } else {
+            model.addAttribute("cars", carService.getCountedCars(count));
+        }
+
         return "cars";
     }
 }
