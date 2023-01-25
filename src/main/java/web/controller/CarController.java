@@ -21,12 +21,8 @@ public class CarController {
     public String getCarTable(@RequestParam(value = "count", defaultValue = "5",
             required = false) Integer count, Model model) {
 
-        if (count == null) {
-            model.addAttribute("cars", carService.getAllCars());
-        } else {
-            model.addAttribute("cars", carService.getCountedCars(count));
-        }
-
+        model.addAttribute("cars", carService.getCountedCars(count));
+        
         return "cars";
     }
 }
