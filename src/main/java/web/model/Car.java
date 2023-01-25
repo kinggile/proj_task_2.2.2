@@ -5,6 +5,9 @@ public class Car {
     private int length;
     private int width;
 
+    public Car() {
+    }
+
     public Car(String carModel, int length, int width) {
         this.carModel = carModel;
         this.length = length;
