@@ -22,7 +22,7 @@ public class CarController {
             required = false) Integer count, Model model) {
 
         model.addAttribute("cars", carService.getCountedCars(count));
-        
+
         return "cars";
     }
 }
