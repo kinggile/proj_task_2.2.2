@@ -17,9 +17,9 @@
 
     <tbody>
     <tr th:each="car : ${cars}">
-        <td th:utext="${car.getCarModel()}"> </td>
-        <td th:utext="${car.getLength()}"> </td>
-        <td th:utext="${car.getWidth()}"> </td>
+        <td th:text="${car.getCarModel()}"> </td>
+        <td th:text="${car.getLength()}"> </td>
+        <td th:text="${car.getWidth()}"> </td>
     </tr>
     </tbody>
 
