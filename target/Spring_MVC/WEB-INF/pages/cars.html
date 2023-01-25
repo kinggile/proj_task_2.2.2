@@ -6,25 +6,23 @@
 </head>
 <body>
 
-<table class="Cars">
+<table class="table table-dark">
     <thead>
     <tr>
-        <th>carModel</th>
-        <th>length</th>
-        <th>width</th>
+        <th>MODEL</th>
+        <th>LENGTH</th>
+        <th>WIDTH</th>
     </tr>
     </thead>
 
     <tbody>
-    <tr th:each="car: ${carList}">
-
-        <td th:text="${car.getCarModel()}"></td>
-        <td th:text="${car.getLength()}"></td>
-        <td th:text="${car.getWidth()}"></td>
-
-
+    <tr th:each="car : ${cars}">
+        <td th:utext="${car.getCarModel()}"> </td>
+        <td th:utext="${car.getLength()}"> </td>
+        <td th:utext="${car.getWidth()}"> </td>
     </tr>
     </tbody>
+
 </table>
 
 </body>
